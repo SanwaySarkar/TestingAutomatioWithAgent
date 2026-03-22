@@ -240,6 +240,7 @@ def _execute_row(rules, row, ri, db_resolved):
         elif op=="subtract":      out[col]=compute_subtract(va,vb)
         elif op=="divide":        out[col]=compute_divide(va,vb)
         elif op=="add_constant":  out[col]=compute_add_constant(va,const)
+        elif op=="compound":      out[col]=compute_compound(rule.get("expression","0"), row)
         elif op=="db_lookup":     out[col]=db_resolved.get((ri,col),"N/A")
         else:                     out[col]=""
     return out
