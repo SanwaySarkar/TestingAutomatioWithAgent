@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug LangGraph Orchestrator",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/langgraph_orchestrator.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--input", "data/InputFile.xlsx",
+                "--rules", "data/RuleFile.xlsx",
+                "--provider", "gemini"
+            ],
+            "python": "${command:python.interpreterPath}"
+        }
+    ]
+}

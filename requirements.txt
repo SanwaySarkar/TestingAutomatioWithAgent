@@ -1,0 +1,53 @@
+# =============================================================================
+# Investment ETL — LangGraph / LangChain Agentic System
+# requirements.txt
+# =============================================================================
+# Python >= 3.11 required (uses match-case, TypedDict, dataclasses, ast)
+#
+# INSTALL:
+#   pip install -r requirements.txt
+#
+# PROVIDER-SPECIFIC (install only what you need):
+#   Claude  → anthropic
+#   Gemini  → google-generativeai  (or langchain-google-genai if using real LC)
+#   Ollama  → ollama  (server must be running separately: https://ollama.com)
+#
+# REAL LANGCHAIN/LANGGRAPH (optional — native impl included as fallback):
+#   pip install -r requirements.txt -r requirements-langchain.txt
+# =============================================================================
+
+# ── Core runtime ──────────────────────────────────────────────────────────────
+pandas>=2.1.0
+openpyxl>=3.1.2
+
+# ── LLM Providers (install at least one) ─────────────────────────────────────
+
+# Claude (Anthropic)
+anthropic>=0.40.0
+
+# Gemini (Google) — needs GEMINI_API_KEY env var
+google-generativeai>=0.8.0
+
+# Ollama — local models, no API key needed
+# The ollama Python client is optional; the system uses raw HTTP to localhost
+# Install only if you want the official client:
+# ollama>=0.4.0
+
+# ── Real LangChain / LangGraph (optional) ────────────────────────────────────
+# Our native impl (lc_core.py / lg_graph.py) is used automatically when these
+# are NOT installed. Install below to use the official packages instead.
+
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-anthropic>=0.3.0
+langchain-google-genai>=2.0.0
+langchain-ollama>=0.2.0
+langchain-community>=0.3.0
+langgraph>=0.2.0
+
+# ── Dev / testing ─────────────────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+
+# ── Type checking (optional) ──────────────────────────────────────────────────
+# mypy>=1.8.0
