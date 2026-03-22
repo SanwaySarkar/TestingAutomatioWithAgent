@@ -1,7 +1,7 @@
 """
 langgraph_orchestrator.py
 =========================
-Investment ETL — 10 Agents wired as a LangGraph StateGraph.
+ETL — 10 Agents wired as a LangGraph StateGraph.
 
 Architecture:
   ┌─────────────────────────────────────────────────────────────────┐
